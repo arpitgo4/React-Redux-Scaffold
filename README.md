@@ -1,6 +1,6 @@
 
-# React-Redux-Scaffold [![Build Status](https://travis-ci.org/arpitgo4/Express-React-Scaffold.svg?branch=master)](https://travis-ci.org/arpitgo4/Express-React-Scaffold) [![Coverage Status](https://coveralls.io/repos/github/arpitgo4/Express-React-Scaffold/badge.svg?branch=master)](https://coveralls.io/github/arpitgo4/Express-React-Scaffold?branch=master)
-Full stack JS scaffold with ExpressJS as the backend server and React-Redux on the client side. Scaffold supports production and development modes, with **Best Developer Experience** ( DX ) by Hot-Loading for the client side application and automatic server restarts for the backend server on code change. There will be no need to restart during development, hence making the experience smooth and decrease the delivery time.
+# React-Redux-Scaffold [![Build Status](https://travis-ci.org/arpitgo4/React-Redux-Scaffold.svg?branch=master)](https://travis-ci.org/arpitgo4/React-Redux-Scaffold)
+Client side scaffold with React-Redux on the frontend and Express server to serve built files in the production mode. Scaffold supports production and development modes, with **Best Developer Experience** ( DX ) by Hot-Loading for the client side application. There will be no need to restart during development, hence making the experience smooth and decrease the delivery time.
 
 ## Scaffold Structure 
 
@@ -51,7 +51,6 @@ npm start
 npm run start:development
 ```
 
-Frontend and Backend dev servers will start at http://localhost:3000 and http://localhost:8080, respectively.
 Hit frontend dev server to load application in the browser, enjoy developing :)
 
 Refer to the [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate) for further description.
