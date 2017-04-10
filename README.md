@@ -63,7 +63,7 @@ npm run build:production
 # Build the client for production deployment and start the backend server with 'forever' package
 npm start 
 ```
-Backend server will start at http://localhost:8080, inside **forever** process and bundled frontend client will be served from the `dist` directory.
+Backend server will start at http://localhost:8080 or the value provided in PORT environment variable, inside **forever** process and bundled frontend client will be served from the `dist` directory.
 
 ## Known Limitations
 * Hot Reloading of the Routes ( Browser refresh is needed! ).
