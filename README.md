@@ -6,21 +6,21 @@ Full stack JS scaffold with ExpressJS as the backend server and React-Redux on t
 
 ```
 	.
-	├── src                     #  Frontend source files
-	|   ├── components          #  React component's source
-	|   ├── config              #  Redux store's configuration
-	|   ├── layouts             #  React layout component's source
+	├── src                     	#  Frontend source files
+	|   ├── components          	#  React component's source
+	|   ├── config              	#  Redux store's configuration
+	|   ├── layouts             	#  React layout component's source
 	|   |   └── App.Router.js 	#  React Router    
-	|   ├── reducers            #  Redux reducer's source
-	|   ├── index.html          #  Root HTML template
-	|   ├── index.js            #  Frontend source entry point
-	|   └── style.css           #  Global stylesheet
-	├── .babelrc                #  Babel configuration ( ES6, React, JSX )
-	├── .eslintrc               #  ESLint configuration
-	├── devServer.js            #  Hot loading server source ( development mode )                     
+	|   ├── reducers            	#  Redux reducer's source
+	|   ├── index.html          	#  Root HTML template
+	|   ├── index.js            	#  Frontend source entry point
+	|   └── style.css           	#  Global stylesheet
+	├── .babelrc                	#  Babel configuration ( ES6, React, JSX )
+	├── .eslintrc               	#  ESLint configuration
+	├── devServer.js            	#  Hot loading server source ( development mode )                     
 	├── dist                        #  Compiled files     
 	├── .gitignore                  #  Ignored files from git commit
-	├── server.js                      #  Express server configuration ( routes, middlewares, models )
+	├── server.js                   #  Express server configuration ( routes, middlewares, models )
 	├── LICENSE                     #  License to use the project
 	├── package.json                #  Frontend and backend dependencies
 	├── README.md                   #  This file
