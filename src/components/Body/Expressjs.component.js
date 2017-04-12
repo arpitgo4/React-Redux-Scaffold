@@ -8,7 +8,7 @@ export default class ExpressJS extends React.Component {
 			<div className="container">
 				<p className="lead">ExpressJS</p>				
 				<p>ExpressJS is the server side framework for NodeJS platform.</p>	
-				<i style={{ color: 'red' }} className="fa fa-code"></i>					
+				<i style={{ color: 'red' }} className="fa fa-facebook"></i>
 			</div>
 		)
 	}
