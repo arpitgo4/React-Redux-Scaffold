@@ -45,7 +45,8 @@
     "serve-favicon": "~2.3.2",
     "style-loader": "^0.13.2",
     "superagent": "^3.5.0",
-    "url-loader": "^0.5.8"
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.3"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
