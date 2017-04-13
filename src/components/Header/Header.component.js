@@ -13,7 +13,7 @@ export default class Header extends React.Component {
 					</h1>
 				</div>
 				<h1 className="page-header">
-						Express-React-Scaffold
+						React-Redux-Scaffold
 				</h1>
 			</div>
 		)
