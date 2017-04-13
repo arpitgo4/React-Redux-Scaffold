@@ -17,17 +17,17 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 	|   └── style.css           	#  Global stylesheet
 	├── .babelrc                	#  Babel configuration ( ES6, React, JSX )
 	├── .eslintrc               	#  ESLint configuration
-	├── .travis.yml 				#  Travis CI configuration file
+	├── .travis.yml 		#  Travis CI configuration file
 	├── devServer.js            	#  Hot loading server source ( development mode )                     
 	├── dist                        #  Compiled files     
 	├── .gitignore                  #  Ignored files from git commit
 	├── server.js                   #  Express server configuration ( routes, middlewares, models )
 	├── LICENSE                     #  License to use the project
 	├── package.json                #  Frontend and backend dependencies
-	├── Procfile					#  Heroku procfile, for deployment
+	├── Procfile			#  Heroku procfile, for deployment
 	├── README.md                   #  This file
 	├── webpack.config.js           #  Webpack configuration for 'production' 
-	└── webpack.dev.config.js 		#  Webpack configuration for 'development' 
+	└── webpack.dev.config.js 	#  Webpack configuration for 'development' 
 ```
 
 ## Quick Start
