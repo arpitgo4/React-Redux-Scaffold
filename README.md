@@ -21,7 +21,7 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 	├── devServer.js            	#  Hot loading server source ( development mode )                     
 	├── dist                        #  Compiled files     
 	├── .gitignore                  #  Ignored files from git commit
-	├── server.js                   #  Express server configuration ( routes, middlewares, models )
+	├── server.js                   #  Express server to serve index.html and other assets
 	├── LICENSE                     #  License to use the project
 	├── package.json                #  Frontend and backend dependencies
 	├── Procfile			#  Heroku procfile, for deployment
