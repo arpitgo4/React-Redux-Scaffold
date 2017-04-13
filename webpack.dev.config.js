@@ -2,10 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 
 const ENTRY_POINTS = [ './src/index' ];
+const DEV_ENTRY_POINTS = ENTRY_POINTS.concat( [ 'webpack-hot-middleware/client' ] );
 
 module.exports = {
-  devtool: 'cheap-source-map',
-  entry: ENTRY_POINTS,
+  devtool: 'cheap-module-eval-source-map',
+  entry: DEV_ENTRY_POINTS,
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -22,9 +23,9 @@ module.exports = {
   ],
   module: {
       loaders: [
-      { test: /\.html$/, loaders: ['file-loader?name=[name].[ext]'], include: path.join(__dirname, 'src') },
-      { test: /\.js$/, loaders: ['babel-loader'], include: path.join(__dirname, 'src') },
-      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
+      { test: /\.html$/, loaders: ['react-hot-loader', 'file-loader?name=[name].[ext]'], include: path.join(__dirname, 'src') },
+      { test: /\.js$/, loaders: ['react-hot-loader', 'babel-loader'], include: path.join(__dirname, 'src') },
+      { test: /\.css$/, loaders: ['react-hot-loader', 'style-loader', 'css-loader'] },
       { test: /\.png$/, loader: 'file-loader?limit=100000' },
       { test: /\.jpg$/, loader: 'file-loader?name=/images/[name].[ext]' },
       { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=[name].[ext]&limit=10000&mimetype=application/font-woff' }, //
