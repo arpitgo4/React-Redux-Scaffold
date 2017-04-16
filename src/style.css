@@ -1,0 +1,19 @@
+body {
+	background-color: red;
+}
+
+#react-app {
+	color: red;
+}
+
+* {
+	color: red;
+}
+
+#app-container {
+	color: purple;
+}
+
+.lead {
+	color: white;
+}
