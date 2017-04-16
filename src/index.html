@@ -3,13 +3,16 @@
   <head>
     <title>React-Redux Scaffholding!</title>
 
+    <!-- stylsheets are loaded parallely by default -->
+    <link rel="stylesheet" href="/style.bundle.css"></link>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div id='react-app'></div>
 
     <!-- 'defer' attribute will fetch the scripts parallely, but will execute them in order. -->
-    <script defer src="/vendor.bundle.js"></script>
-    <script defer src="/app.bundle.js"></script>
+    <script type="text/javascript" defer src="/vendor.bundle.js"></script>
+    <script type="text/javascript" defer src="/app.bundle.js"></script>
   </body>
 </html>
