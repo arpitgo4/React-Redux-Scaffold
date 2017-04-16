@@ -8,7 +8,7 @@ module.exports = {
   entry: { app: ENTRY_POINTS },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     chunkFilename: '[name]-[chunkhash].js',
     sourceMapFilename: 'bundle.map.js',
     publicPath: '/'
