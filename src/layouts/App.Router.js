@@ -3,15 +3,11 @@ import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'reac
 
 import AppLayout from './App.layout';
 
-import NodeJS from '../components/Body/Nodejs.component';
-/*import ExpressJS from '../components/Body/Expressjs.component';
-import ReactJS from '../components/Body/Reactjs.component';
-import MongoDB from '../components/Body/Mongodb.component';*/
-
 const AppRouter = () => (
-	<Router history={browserHistory}>
+	<Router history={browtoryserHistory}>
 		<Route path="/" component={AppLayout} >
-			<IndexRoute component={NodeJS} />
+			<IndexRoute getComponent={() => System.import('../components/Body/Nodejs.component')
+															.then(c => c.default) } />
 			<Route path="express" getComponent={() => System.import('../components/Body/Expressjs.component')
 															.then(c => c.default) } />
 			<Route path="mongo" getComponent={() => System.import('../components/Body/Mongodb.component')
