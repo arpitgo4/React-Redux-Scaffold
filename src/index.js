@@ -14,7 +14,7 @@ import './style.css';
 
 ReactDOM.render(
 	<AppRouter />,
-	document.getElementById('root')
+	document.getElementById('react-app')
 );
 
 // for hot reloading this router component.
