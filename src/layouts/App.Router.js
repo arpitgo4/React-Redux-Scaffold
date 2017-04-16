@@ -4,7 +4,7 @@ import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'reac
 import AppLayout from './App.layout';
 
 const AppRouter = () => (
-	<Router history={browtoryserHistory}>
+	<Router history={browserHistory}>
 		<Route path="/" component={AppLayout} >
 			<IndexRoute getComponent={() => System.import('../components/Body/Nodejs.component')
 															.then(c => c.default) } />
