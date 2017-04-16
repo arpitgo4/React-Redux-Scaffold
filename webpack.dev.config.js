@@ -6,10 +6,11 @@ const DEV_ENTRY_POINTS = ENTRY_POINTS.concat( [ 'webpack-hot-middleware/client' 
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: DEV_ENTRY_POINTS,
+  entry: { app: DEV_ENTRY_POINTS },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
+    chunkFilename: '[name]-[chunkhash].js',
     sourceMapFilename: 'bundle.map.js',
     publicPath: '/'
   },
@@ -19,6 +20,10 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource)   
     })
   ],
   module: {

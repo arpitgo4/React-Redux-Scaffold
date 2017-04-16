@@ -5,10 +5,11 @@ const ENTRY_POINTS = [ './src/index' ];
 
 module.exports = {
   devtool: 'cheap-source-map',
-  entry: ENTRY_POINTS,
+  entry: { app: ENTRY_POINTS },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
+    chunkFilename: '[name]-[chunkhash].js',
     sourceMapFilename: 'bundle.map.js',
     publicPath: '/'
   },
@@ -18,6 +19,10 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource) 
     })
   ],
   module: {
