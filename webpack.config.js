@@ -31,7 +31,7 @@ module.exports = {
       loaders: [
       { test: /\.html$/, loaders: ['file-loader?name=[name].[ext]'], include: path.join(__dirname, 'src') },
       { test: /\.js$/, loaders: ['babel-loader'], include: path.join(__dirname, 'src') },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader' ] }) },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
       { test: /\.png$/, loader: 'file-loader?limit=100000' },
       { test: /\.jpg$/, loader: 'file-loader?name=/images/[name].[ext]' },
       { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=[name].[ext]&limit=10000&mimetype=application/font-woff' }, //
