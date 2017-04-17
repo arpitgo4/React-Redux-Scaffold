@@ -18,8 +18,8 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 	├── .babelrc                	#  Babel configuration ( ES6, React, JSX )
 	├── .eslintrc               	#  ESLint configuration
 	├── .travis.yml 		#  Travis CI configuration file
-	├── devServer.js            	#  Hot loading server source ( development mode )                     
-	├── dist                        #  Compiled files     
+	├── devServer.js            	#  Hot loading server source ( development mode )
+	├── dist                        #  Compiled files
 	├── .gitignore                  #  Ignored files from git commit
 	├── server.js                   #  Express server to serve index.html and other assets
 	├── LICENSE                     #  License to use the project
