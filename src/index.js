@@ -10,7 +10,6 @@ import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 
-import './style.css';
 import './style.scss';
 
 ReactDOM.render(
