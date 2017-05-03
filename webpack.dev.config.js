@@ -31,6 +31,7 @@ module.exports = {
       { test: /\.html$/, loaders: ['react-hot-loader', 'file-loader?name=[name].[ext]'], include: path.join(__dirname, 'src') },
       { test: /\.js$/, loaders: ['react-hot-loader', 'babel-loader'], include: path.join(__dirname, 'src') },
       { test: /\.css$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader' ] },
+      { test: /\.scss$|\.sass$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader', 'sass-loader' ] },
       { test: /\.png$/, loader: 'file-loader?limit=100000' },
       { test: /\.jpg$/, loader: 'file-loader?name=/images/[name].[ext]' },
       { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=[name].[ext]&limit=10000&mimetype=application/font-woff' }, //
