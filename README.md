@@ -14,7 +14,7 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 	|   ├── reducers            	#  Redux reducer's source
 	|   ├── index.html          	#  Root HTML template
 	|   ├── index.js            	#  Frontend source entry point
-	|   └── style.css           	#  Global stylesheet
+	|   └── style.scss           	#  Global Sass stylesheet
 	├── .babelrc                	#  Babel configuration ( ES6, React, JSX )
 	├── .eslintrc               	#  ESLint configuration
 	├── .travis.yml 		#  Travis CI configuration file
