@@ -1,7 +1,10 @@
 import React from 'react';
-
+import CSSModules from 'react-css-modules';
 import superagent from 'superagent';
 
+import styles from './style.scss';
+
+@CSSModules(styles)
 export default class Header extends React.Component {
 
 	render(){
@@ -12,7 +15,7 @@ export default class Header extends React.Component {
 						React-Redux-Scaffold
 					</h1>
 				</div>
-				<h1 className="page-header">
+				<h1 styleName="header" className="page-header">
 						React-Redux-Scaffold
 				</h1>
 			</div>
