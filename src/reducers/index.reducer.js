@@ -1,5 +1,5 @@
 
-const RootReducer = (state = {}, action) => {
+const rootReducer = (state = {}, action) => {
 
 	switch(action.type){
 		
@@ -7,4 +7,4 @@ const RootReducer = (state = {}, action) => {
 	}
 };
 
-export default RootReducer;
+export default rootReducer;

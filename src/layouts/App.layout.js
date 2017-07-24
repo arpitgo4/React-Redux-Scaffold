@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Header from '../components/Header/Header.component';
-import Footer from '../components/Footer/Footer.component';
+import Header from '../components/presentationals/Header/Header.component';
+import Footer from '../components/presentationals/Footer/Footer.component';
 
 export default class AppLayout extends React.Component {
 	render(){
