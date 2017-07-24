@@ -24,7 +24,7 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 	├── server.js                   #  Express server to serve index.html and other assets
 	├── LICENSE                     #  License to use the project
 	├── package.json                #  Frontend and backend dependencies
-	├── postcss.config.js 			#  PostCSS configuration
+	├── postcss.config.js 		#  PostCSS configuration
 	├── Procfile			#  Heroku procfile, for deployment
 	├── README.md                   #  This file
 	├── webpack.config.js           #  Webpack configuration for 'production' 
