@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router';
+import CSSModules from 'react-css-modules';
 
 import styles from './style.scss';
 
+@CSSModules(styles)
 export default class Footer extends React.Component {
 	render(){
-		console.log('styles', styles);
 		return (
 			<div className="container">
 				<div className="btn-group">
 					<Link to="/">
-						<button className={`btn btn-default btn-sm ${styles.link}`}>NodeJS</button>
+						<button styleName="link" className="btn btn-default btn-sm">NodeJS</button>
 					</Link>
 					<Link to="/express">
 						<button className="btn btn-default btn-sm">ExpressJS</button>

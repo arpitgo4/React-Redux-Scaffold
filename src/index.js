@@ -2,15 +2,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppRouter from './layouts/App.Router';
-import './index.html';
-
 import 'jquery';
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 
+import './index.html';
 import './style.scss';
+
+import AppRouter from './layouts/App.Router';
 
 ReactDOM.render(
 	<AppRouter />,

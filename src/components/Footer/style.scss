@@ -1,4 +1,10 @@
 
 .link {
 	color: red;
+	background-color: black;
+
+	&:hover {
+		background-color: blue;
+		color: red;
+	}
 }

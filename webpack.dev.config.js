@@ -38,6 +38,8 @@ module.exports = {
       // loader config for app css and scss files
       { test: /\.css$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'postcss-loader' ], include: path.join(__dirname, 'src') },
       { test: /\.scss$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader', 'postcss-loader' ], include: path.join(__dirname, 'src') },
+
+      // loader config for images and fonts
       { test: /\.png$/, loader: 'file-loader?limit=100000' },
       { test: /\.jpg$/, loader: 'file-loader?name=/images/[name].[ext]' },
       { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=[name].[ext]&limit=10000&mimetype=application/font-woff' }, //
