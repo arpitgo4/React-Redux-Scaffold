@@ -1,14 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class NodeJS extends React.Component {
+class NodeJS extends Component {
 
 	render(){
 		return (
 			<div className="container">
-				<p className="lead">NodeJS</p>
-				<p>NodeJS is the platform to run javascript on Google's V8 engine.</p>
+				<p className="lead">{this.props.heading}</p>
+				<p>{this.props.content}</p>
 			</div>				
 		)
 	}
 }
+
+const mapStateToProps = ({ content }) => {
+	return {
+		heading: content.nodejs.heading,
+		content: content.nodejs.content
+	};
+};
+
+const mapDispatchToProps = null;
+
+export default connect(mapStateToProps, mapDispatchToProps)(NodeJS);

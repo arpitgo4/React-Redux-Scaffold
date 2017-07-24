@@ -1,13 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class MongoDB extends React.Component {
+class MongoDB extends Component {
 	render(){
 		return (
 			<div className="container">
-				<p className="lead">MongoDB</p>
-				<p>MongoDB is the document based database. It stores JSON object in the form of BSON.</p>
+				<p className="lead">{this.props.heading}</p>
+				<p>{this.props.content}</p>
 			</div>
 		);
 	}
 }
+
+const mapStateToProps = ({ content }) => {
+	return {
+		heading: content.mongodb.heading,
+		content: content.mongodb.content
+	};
+};
+
+const mapDispatchToProps = null;
+
+export default connect(mapStateToProps, mapDispatchToProps)(MongoDB);
