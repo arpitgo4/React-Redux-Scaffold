@@ -24,7 +24,7 @@ if(module.hot){
 		console.log('>>>>>> Router Updated !! <<<<<<<')
 		ReactDOM.render(
 			<AppRouter />,
-			document.getElementById('root')
+			document.getElementById('react-app')
 		);
 	});
 }

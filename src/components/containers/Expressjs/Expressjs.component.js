@@ -7,7 +7,7 @@ class ExpressJS extends Component {
 		return (	
 			<div className="container">
 				<p className="lead">{this.props.heading}</p>				
-				<p>{this.props.content}</p>	
+				<p>{this.props.content}</p>
 			</div>
 		)
 	}
