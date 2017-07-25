@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const ENTRY_POINTS = [ './src/index' ];
-const DEV_ENTRY_POINTS = ENTRY_POINTS.concat( [ 'webpack-hot-middleware/client' ] );
+const SRC_ENTRY_POINTS = [ './src/index' ];
+const DEV_ENTRY_POINTS = [ 'react-hot-loader/patch', 'webpack-hot-middleware/client' ].concat(SRC_ENTRY_POINTS);
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -28,16 +28,16 @@ module.exports = {
   ],
   module: {
       loaders: [
-      { test: /\.html$/, loaders: ['react-hot-loader', 'file-loader?name=[name].[ext]'], include: path.join(__dirname, 'src') },
-      { test: /\.js$/, loaders: ['react-hot-loader', 'babel-loader'], include: path.join(__dirname, 'src') },
+      { test: /\.html$/, loaders: ['react-hot-loader/webpack', 'file-loader?name=[name].[ext]'], include: path.join(__dirname, 'src') },
+      { test: /\.js$/, loaders: ['react-hot-loader/webpack', 'babel-loader'], include: path.join(__dirname, 'src') },
 
       // loader config for vendor css and scss files
       { test: /\.css$/, loaders: [ 'style-loader', 'css-loader' ], exclude: path.join(__dirname, 'src') },
       { test: /\.scss$/, loaders: [ 'style-loader', 'css-loader', 'sass-loader' ], exclude: path.join(__dirname, 'src') },
       
       // loader config for app css and scss files
-      { test: /\.css$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'postcss-loader' ], include: path.join(__dirname, 'src') },
-      { test: /\.scss$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader', 'postcss-loader' ], include: path.join(__dirname, 'src') },
+      { test: /\.css$/, loaders: [ 'react-hot-loader/webpack', 'style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'postcss-loader' ], include: path.join(__dirname, 'src') },
+      { test: /\.scss$/, loaders: [ 'react-hot-loader/webpack', 'style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader', 'postcss-loader' ], include: path.join(__dirname, 'src') },
 
       // loader config for images and fonts
       { test: /\.png$/, loader: 'file-loader?limit=100000' },
