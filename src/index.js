@@ -21,7 +21,7 @@ ReactDOM.render(
 if(module.hot){
 	module.hot.accept('./layouts/App.Router.js', () => {
 		const AppRouter = require('./layouts/App.Router.js').default;
-	//	console.log('>>>>>> Router Updated !! <<<<<<<');
+		//	console.log('>>>>>> Router Updated !! <<<<<<<');
 		ReactDOM.render(
 			<AppRouter />,
 			document.getElementById('react-app')

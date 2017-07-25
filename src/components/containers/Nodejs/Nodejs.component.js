@@ -8,6 +8,7 @@ class NodeJS extends Component {
 			<div className="container">
 				<p className="lead">{this.props.heading}</p>
 				<p>{this.props.content}</p>
+				<p></p>
 			</div>				
 		)
 	}
