@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production npm run build:production && forever ./server.js",
     "start:development": "cross-env NODE_ENV=development node ./devServer.js",
-    "build:production": "cross-env NODE_ENV=production webpack -p --progress"
+    "build:production": "cross-env NODE_ENV=production webpack -p --progress --color"
   },
   "repository": {
     "type": "git",

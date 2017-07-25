@@ -1,15 +1,16 @@
-var path = require('path');
-var webpack = require('webpack');
-var express = require('express');
-var config = require('./webpack.dev.config');
+const path = require('path');
+const webpack = require('webpack');
+const express = require('express');
+const config = require('./webpack.dev.config');
 
-var app = express();
-var compiler = webpack(config);
+const app = express();
+const compiler = webpack(config);
 
 const devConfig = config.devServer;
 
 app.use(require('webpack-dev-middleware')(compiler, {
-  publicPath: config.output.publicPath
+  publicPath: config.output.publicPath,
+  stats: { colors: true }
 }));
 
 app.use(require('webpack-hot-middleware')(compiler));
@@ -23,5 +24,5 @@ app.listen(3000, function(err) {
     return console.error(err);
   }
 
-  console.log('FrontEnd Server Listening at http://localhost:3000/');
+  console.log('FrontEnd DevServer Listening at http://localhost:3000/');
 });
