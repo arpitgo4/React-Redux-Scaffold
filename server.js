@@ -4,6 +4,13 @@ const cluster = require('cluster');
 
 const app = express(); 
 
+// middleware to serve gzipped js file.
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
+
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*', function(req, res) {

@@ -8,6 +8,13 @@ const compiler = webpack(config);
 
 const devConfig = config.devServer;
 
+// middleware to serve gzipped js file.
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
+
 app.use(require('webpack-dev-middleware')(compiler, {
   publicPath: config.output.publicPath,
   stats: { colors: true }
