@@ -7,6 +7,9 @@
     "start:development": "cross-env NODE_ENV=development node ./devServer.js",
     "build:production": "cross-env NODE_ENV=production webpack -p --progress --color"
   },
+  "engines": {
+    "node": "6.9.2"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/arpitgo4/React-Redux-Scaffold"
