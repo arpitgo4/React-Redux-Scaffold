@@ -56,7 +56,6 @@ module.exports = {
       { test: /\.png$/, loader: 'file-loader?limit=100000' },
       { test: /\.jpg$/, loader: 'file-loader?limit=100000' },
       
-      { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?name=[name].[ext]&mimetype=application/font-woff' }, 
       { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=[name].[ext]&limit=10000&mimetype=application/font-woff' }, //
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=[name].[ext]&limit=10000&mimetype=application/octet-stream' },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=[name].[ext]' }, //
