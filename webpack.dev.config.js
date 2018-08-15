@@ -30,7 +30,7 @@ module.exports = {
       asset: '[path].gz[query]',
       algorithm: 'gzip',
       test: /\.js$/,
-      minRatio: 0
+      cache: true,
     })
   ],
   module: {
