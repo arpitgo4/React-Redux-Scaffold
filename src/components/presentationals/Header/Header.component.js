@@ -1,11 +1,11 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
-import superagent from 'superagent';
 
 import styles from './style.scss';
 
-@CSSModules(styles)
-export default class Header extends React.Component {
+
+
+class Header extends React.Component {
 
 	render(){
 		return (
@@ -23,3 +23,4 @@ export default class Header extends React.Component {
 	}
 }
 
+export default CSSModules(Header, styles);

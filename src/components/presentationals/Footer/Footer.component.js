@@ -4,8 +4,9 @@ import CSSModules from 'react-css-modules';
 
 import styles from './style.scss';
 
-@CSSModules(styles)
-export default class Footer extends React.Component {
+
+
+class Footer extends React.Component {
 	render(){
 		return (
 			<div className="container">
@@ -27,3 +28,6 @@ export default class Footer extends React.Component {
 		);
 	}
 }
+
+
+export default CSSModules(Footer, styles);

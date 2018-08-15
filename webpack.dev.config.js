@@ -35,21 +35,21 @@ module.exports = {
   ],
   module: {
       loaders: [
-      { test: /\.html$/, loaders: ['react-hot-loader', 'file-loader?name=[name].[ext]'], include: path.join(__dirname, 'src') },
-      { test: /\.js$/, loaders: ['react-hot-loader', 'babel-loader'], include: path.join(__dirname, 'src') },
+      { test: /\.html$/, loaders: ['file-loader?name=[name].[ext]'], include: path.join(__dirname, 'src') },
+      { test: /\.js$/, loaders: ['babel-loader'], include: path.join(__dirname, 'src') },
 
       // loader config for vendor css and scss files
       { test: /\.css$/, loaders: [ 'style-loader', 'css-loader' ], exclude: path.join(__dirname, 'src') },
       { test: /\.scss$/, loaders: [ 'style-loader', 'css-loader', 'sass-loader' ], exclude: path.join(__dirname, 'src') },
       
       // loader config for app css and scss files, with css modules
-      { test: /\.css$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'postcss-loader' ], include: [ path.join(__dirname, 'src', 'components'), 
+      { test: /\.css$/, loaders: ['style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'postcss-loader' ], include: [ path.join(__dirname, 'src', 'components'), 
       path.join(__dirname, 'src', 'layouts' ) ] },
-      { test: /\.scss$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader', 'postcss-loader' ], include: [ path.join(__dirname, 'src', 'components'), 
+      { test: /\.scss$/, loaders: ['style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader', 'postcss-loader' ], include: [ path.join(__dirname, 'src', 'components'), 
       path.join(__dirname, 'src', 'layouts' ) ] },
 
       // global scss file configuration
-      { test: /\.scss$|\.css$/, loaders: [ 'react-hot-loader', 'style-loader', 'css-loader', 'sass-loader', 'postcss-loader' ], include: [ path.join(__dirname, 'src', 'style.scss'),
+      { test: /\.scss$|\.css$/, loaders: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader' ], include: [ path.join(__dirname, 'src', 'style.scss'),
       path.join(__dirname, 'src', 'media' )] }, 
 
       // loader config for images and fonts
