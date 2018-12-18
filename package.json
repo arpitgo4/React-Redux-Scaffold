@@ -1,11 +1,12 @@
 {
   "name": "react-redux-scaffold",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=production npm run build:production && forever ./server.js",
     "start:development": "cross-env NODE_ENV=development node ./devServer.js",
-    "build:production": "cross-env NODE_ENV=production webpack -p --progress --color"
+    "build:production": "cross-env NODE_ENV=production webpack -p --progress --color",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
   },
   "engines": {
     "node": "6.9.2"
@@ -71,11 +72,23 @@
     "webpack": "^2.4.1"
   },
   "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-15": "^1.1.0",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.6.2",
+    "fetch-mock": "^7.0.1",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.3",
     "react-hot-loader": "^4.3.4",
+    "react-test-renderer": "^15.6.2",
+    "redux-mock-store": "^1.5.3",
     "webpack-dev-middleware": "^1.12.2",
     "webpack-hot-middleware": "^2.22.3"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|sass|less)$": "<rootDir>/src/__mocks__/styleMock.js"
+    }
   }
 }
