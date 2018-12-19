@@ -1,5 +1,12 @@
 
+## library and third party dependencies
 node_modules
+
+## git repo
 .git
+
+## scaffold build
 dist
+
+## logging
 *.log

@@ -8,3 +8,4 @@ dist/
 
 ## debug logs
 npm-debug*
+*.log
