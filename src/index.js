@@ -11,13 +11,14 @@ import './style.scss';
 import configureStore from './config/store.config';
 import AppRouter from './layouts/App.Router';
 
+
 const history = createBrowserHistory();
 
-const renderApp = (App, history) => {
+const renderApp = (AppRouter, history) => {
 	ReactDOM.render(
 		<AppContainer>
 			<Provider store={configureStore(history)}>
-				<App history={history} />
+				<AppRouter history={history} />
 			</Provider>
 		</AppContainer>,
 		document.getElementById('react-app')
