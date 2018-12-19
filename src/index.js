@@ -14,7 +14,7 @@ import AppRouter from './layouts/App.Router';
 
 const history = createBrowserHistory();
 
-const renderApp = (AppRouter, history) => {
+export const renderApp = (AppRouter, history) => {
 	ReactDOM.render(
 		<AppContainer>
 			<Provider store={configureStore(history)}>
