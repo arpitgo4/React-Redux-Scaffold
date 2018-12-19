@@ -1,30 +1,36 @@
 
+import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import 'jquery';
-import 'bootstrap/dist/js/bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'font-awesome/css/font-awesome.css';
+import { Provider, } from 'react-redux';
+import { createBrowserHistory, } from 'history';
 
 import './index.html';
 import './style.scss';
 
+import configureStore from './config/store.config';
 import AppRouter from './layouts/App.Router';
 
-ReactDOM.render(
-	<AppRouter />,
-	document.getElementById('react-app')
-);
+const history = createBrowserHistory();
 
-// for hot reloading this router component.
+const renderApp = (App, history) => {
+	ReactDOM.render(
+		<AppContainer>
+			<Provider store={configureStore(history)}>
+				<App history={history} />
+			</Provider>
+		</AppContainer>,
+		document.getElementById('react-app')
+	);
+};
+
+renderApp(AppRouter, history);
+
+// for hot reloading router.
 if(module.hot){
 	module.hot.accept('./layouts/App.Router.js', () => {
-		const AppRouter = require('./layouts/App.Router.js').default;
+		const updatedAppRouter = require('./layouts/App.Router.js').default;
 		console.log('>>>>>> Router Updated !! <<<<<<<')
-		ReactDOM.render(
-			<AppRouter />,
-			document.getElementById('react-app')
-		);
+		renderApp(updatedAppRouter, history);
 	});
 }

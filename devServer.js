@@ -17,7 +17,8 @@ app.get('*.js', function (req, res, next) {
 
 app.use(require('webpack-dev-middleware')(compiler, {
   publicPath: config.output.publicPath,
-  stats: { colors: true }
+  stats: { colors: true },
+  historyApiFallback: true,
 }));
 
 app.use(require('webpack-hot-middleware')(compiler));

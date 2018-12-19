@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 const ENTRY_POINTS = [ './src/index' ];
-const DEV_ENTRY_POINTS = [ 'webpack-hot-middleware/client' ].concat(ENTRY_POINTS);
+const DEV_ENTRY_POINTS = [ 'react-hot-loader/patch', 'webpack-hot-middleware/client' ].concat(ENTRY_POINTS);
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
