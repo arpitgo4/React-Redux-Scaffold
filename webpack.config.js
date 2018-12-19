@@ -30,6 +30,7 @@ module.exports = {
       algorithm: 'gzip',
       test: /\.js$/,
       cache: true,
+      deleteOriginalAssets: true,
     }),
     new webpack.DefinePlugin({
       NODE_ENV: `'${process.env.NODE_ENV}'`,
