@@ -2,8 +2,6 @@
 # Stage 0, 'build-stage', based on Node.js, to build and compile the frontend  
 FROM arpitgo4/alpine-node AS build-stage
 
-# RUN apk add --no-cache make gcc g++ python2 git
-
 WORKDIR /usr/src/app
 
 COPY package*.json ./
