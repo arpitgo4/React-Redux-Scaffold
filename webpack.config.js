@@ -1,11 +1,21 @@
+const { NODE_ENV, } = process.env;
+
 const path = require('path');
 const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 
-const ENTRY_POINTS = [ './src/index' ];
+let ENTRY_POINTS = [ './src/index' ];
+
+if (NODE_ENV === 'development') {
+  ENTRY_POINTS = [
+    'react-hot-loader/patch', 
+    'webpack-hot-middleware/client',
+  ].concat(ENTRY_POINTS);
+}
+
 
 module.exports = {
-  devtool: 'cheap-source-map',
+  devtool: NODE_ENV === 'development' ? 'cheap-module-eval-source-map' : 'cheap-source-map',
   entry: { app: ENTRY_POINTS },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -16,11 +26,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: ({ resource }) => /node_modules/.test(resource) 
