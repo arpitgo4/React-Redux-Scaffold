@@ -24,7 +24,6 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 	├── dist                      	#  Compiled files
 	├── .gitignore                	#  Ignored files from git commit
 	├── nginx.conf                	#  Nginx production server configuration
-	├── LICENSE                   	#  License to use the project
 	├── package.json              	#  Frontend dependencies
 	├── postcss.config.js 		#  PostCSS configuration
 	├── Procfile			#  Heroku procfile, for deployment
