@@ -34,7 +34,7 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 ## Development
 ```	
 # Start client in development mode with hot code loading,
-docker run --rm -it -p 3000:3000 -v $(pwd):/usr/src/app react-redux-scaffold
+docker run --rm -it -p 3000:3000 -v $(pwd):/usr/src/app arpitgo4/alpine-node
 
 # Inside docker container,
 cd /usr/src/app 
@@ -52,7 +52,7 @@ Refer to the [react-hot-boilerplate](https://github.com/gaearon/react-hot-boiler
 docker build -t react-redux-scaffold .
 
 # Start the project
-docker run --rm -p 80:80 react-redux-scaffold
+docker run --rm --name react-redux-scaffold -d -p 80:80 react-redux-scaffold
 
 # Open web browser at http://localhost
 # You will see a sample Single Page Application
