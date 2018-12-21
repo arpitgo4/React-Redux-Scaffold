@@ -7,7 +7,7 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 ```
 	.
 	├── src                     	#  Frontend source files
-	|	├── actions		#  Action Creators
+	|   ├── actions			#  Action Creators
 	|   ├── components          	#  React component's source
 	|   ├── config              	#  Redux store's configuration
 	|   ├── layouts             	#  React layout component's source
