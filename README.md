@@ -7,7 +7,7 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 ```
 	.
 	├── src                     	#  Frontend source files
-	|	├── actions					#  Action Creators
+	|		├── actions								#  Action Creators
 	|   ├── components          	#  React component's source
 	|   ├── config              	#  Redux store's configuration
 	|   ├── layouts             	#  React layout component's source
@@ -18,18 +18,18 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 	|   └── style.scss           	#  Global Sass stylesheet
 	├── .babelrc                	#  Babel configuration ( ES6, React, JSX )
 	├── .eslintrc               	#  ESLint configuration
-	├── .travis.yml 				#  Travis CI configuration file
+	├── .travis.yml 							#  Travis CI configuration file
 	├── devServer.js            	#  Hot loading server source ( development mode )
-	├── Dockerfile					#  Docker build script
-	├── dist                        #  Compiled files
-	├── .gitignore                  #  Ignored files from git commit
-	├── nginx.conf                  #  Nginx production server configuration
-	├── LICENSE                     #  License to use the project
-	├── package.json                #  Frontend dependencies
-	├── postcss.config.js 			#  PostCSS configuration
-	├── Procfile					#  Heroku procfile, for deployment
-	├── README.md                   #  This file
-	├── webpack.config.js           #  Webpack configuration for 'production' & 'development' 
+	├── Dockerfile								#  Docker build script
+	├── dist                      #  Compiled files
+	├── .gitignore                #  Ignored files from git commit
+	├── nginx.conf                #  Nginx production server configuration
+	├── LICENSE                   #  License to use the project
+	├── package.json              #  Frontend dependencies
+	├── postcss.config.js 				#  PostCSS configuration
+	├── Procfile									#  Heroku procfile, for deployment
+	├── README.md                 #  This file
+	├── webpack.config.js         #  Webpack configuration for 'production' & 'development' 
 ```
 
 ## Development
