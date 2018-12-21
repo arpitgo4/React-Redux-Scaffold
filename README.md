@@ -7,65 +7,54 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 ```
 	.
 	├── src                     	#  Frontend source files
+	|	├── actions					#  Action Creators
 	|   ├── components          	#  React component's source
 	|   ├── config              	#  Redux store's configuration
 	|   ├── layouts             	#  React layout component's source
-	|   |   └── App.Router.js 	#  React Router    
+	|   |   └── App.Router.js 		#  React Router    
 	|   ├── reducers            	#  Redux reducer's source
 	|   ├── index.html          	#  Root HTML template
 	|   ├── index.js            	#  Frontend source entry point
 	|   └── style.scss           	#  Global Sass stylesheet
 	├── .babelrc                	#  Babel configuration ( ES6, React, JSX )
 	├── .eslintrc               	#  ESLint configuration
-	├── .travis.yml 		#  Travis CI configuration file
+	├── .travis.yml 				#  Travis CI configuration file
 	├── devServer.js            	#  Hot loading server source ( development mode )
+	├── Dockerfile					#  Docker build script
 	├── dist                        #  Compiled files
 	├── .gitignore                  #  Ignored files from git commit
-	├── server.js                   #  Express server to serve index.html and other assets
+	├── nginx.conf                  #  Nginx production server configuration
 	├── LICENSE                     #  License to use the project
-	├── package.json                #  Frontend and backend dependencies
-	├── postcss.config.js 		#  PostCSS configuration
-	├── Procfile			#  Heroku procfile, for deployment
+	├── package.json                #  Frontend dependencies
+	├── postcss.config.js 			#  PostCSS configuration
+	├── Procfile					#  Heroku procfile, for deployment
 	├── README.md                   #  This file
-	├── webpack.config.js           #  Webpack configuration for 'production' 
-	└── webpack.dev.config.js 	#  Webpack configuration for 'development' 
-```
-
-## Quick Start
-### Just to check everything is working
-```
-# Install the dependencies
-npm install
-
-# Build the client 
-npm run build:production
-
-# Start the project ( it will build the client, before starting the server )
-npm start
-
-# Open web browser at http://localhost:8080
-# You will see a sample Single Page Application
+	├── webpack.config.js           #  Webpack configuration for 'production' & 'development' 
 ```
 
 ## Development
-### Scaffold provides two npm scripts, execute both in seperate terminals
 ```	
 # Start client in development mode with hot code loading,
-npm run start:development
-```
+docker run --rm -it -p 3000:3000 -v $(pwd):/usr/src/app react-redux-scaffold
 
-Hit frontend dev server to load application in the browser, enjoy developing :)
+# Open web browser at http://localhost:3000
+# Hit frontend dev server to load application in the browser, enjoy developing :)
+```
 
 Refer to the [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate) for further description.
-## Production
-### Scaffold provides two production scripts
-```
-# Build the client for production deployment
-npm run build:production
 
-# Build the client for production deployment and start the backend server with 'forever' package
-npm start 
+## Production
 ```
+# Docker image build
+docker build -t react-redux-scaffold .
+
+# Start the project
+docker run --rm -p 80:80 react-redux-scaffold
+
+# Open web browser at http://localhost
+# You will see a sample Single Page Application
+```
+
 Backend server will start at http://localhost:8080 or the value provided in PORT environment variable, inside **forever** process and bundled frontend client will be served from the `dist` directory.
 
 ## Known Limitations
