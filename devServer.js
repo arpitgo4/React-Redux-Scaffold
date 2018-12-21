@@ -1,12 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const express = require('express');
-const config = require('./webpack.dev.config');
+const config = require('./webpack.config');
 
 const app = express();
 const compiler = webpack(config);
-
-const devConfig = config.devServer;
 
 // middleware to serve gzipped js file.
 app.get('*.js', function (req, res, next) {
