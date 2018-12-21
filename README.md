@@ -37,6 +37,10 @@ Client side scaffold with React-Redux on the frontend and Express server to serv
 # Start client in development mode with hot code loading,
 docker run --rm -it -p 3000:3000 -v $(pwd):/usr/src/app react-redux-scaffold
 
+# Inside docker container,
+cd /usr/src/app 
+npm run start:development
+
 # Open web browser at http://localhost:3000
 # Hit frontend dev server to load application in the browser, enjoy developing :)
 ```
