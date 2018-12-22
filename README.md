@@ -58,8 +58,6 @@ docker run --rm --name react-redux-scaffold -d -p 80:80 react-redux-scaffold
 # You will see a sample Single Page Application
 ```
 
-Backend server will start at http://localhost:8080 or the value provided in PORT environment variable, inside **forever** process and bundled frontend client will be served from the `dist` directory.
-
 ## Known Limitations
 * Hot Reloading of the Routes ( Browser refresh is needed! ).
 
